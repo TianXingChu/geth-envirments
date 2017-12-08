@@ -15,7 +15,7 @@ $BASEDIR/genesis.json
 $BASEDIR/geth --datadir $BASEDIR/data/ethereum \
  --ethash.dagdir $BASEDIR/data/ethash \
  init \
- %0/genesis.json
+$BASEDIR/genesis.json
 
 $BASEDIR/bootnode -genkey $BASEDIR/data/ethereum/node.key
 read -p "DONE, press any key to continue" confirmed
