@@ -18,4 +18,4 @@ $BASEDIR/geth --datadir $BASEDIR/data/ethereum \
 $BASEDIR/genesis.json
 
 $BASEDIR/bootnode -genkey $BASEDIR/data/ethereum/node.key
-read -p "DONE, press any key to continue" confirmed
+read -p "DONE, press ENTER key to continue" confirmed

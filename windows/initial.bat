@@ -18,4 +18,4 @@ geth --datadir %0/../data/ethereum^
 
 bootnode -genkey %0/../data/ethereum/node.key
 @echo off
-set /p confirmed= "DONE, press any key to continue"
+set /p confirmed= "DONE, press ENTER to continue"
