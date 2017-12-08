@@ -12,7 +12,7 @@ fi
 
 echo "your wallet address is 0x$address"
 
-geth --mine^
+$BASEDIR/geth --mine^
  --rpc^
  --unlock 0x%address%^
  --password $BASEDIR/password^

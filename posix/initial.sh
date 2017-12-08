@@ -5,17 +5,17 @@ then
 fi
 
 BASEDIR=$(dirname "$0")
-rm -rf $BASEDIR
+rm -rf $BASEDIR/data
 
-geth account new^
+$BASEDIR/geth account new^
  --datadir $BASEDIR/data/ethereum^
  --password $BASEDIR/password^
 $BASEDIR/genesis.json
 
-geth --datadir $BASEDIR/data/ethereum^
+$BASEDIR/geth --datadir $BASEDIR/data/ethereum^
  --ethash.dagdir $BASEDIR/data/ethash^
  init^
  %0/genesis.json
 
-bootnode -genkey $BASEDIR/data/ethereum/node.key
+$BASEDIR/bootnode -genkey $BASEDIR/data/ethereum/node.key
 read -p "DONE, press any key to continue" confirmed
