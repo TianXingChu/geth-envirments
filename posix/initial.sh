@@ -7,14 +7,14 @@ fi
 BASEDIR=$(dirname "$0")
 rm -rf $BASEDIR/data
 
-$BASEDIR/geth account new^
- --datadir $BASEDIR/data/ethereum^
- --password $BASEDIR/password^
+$BASEDIR/geth account new \
+ --datadir $BASEDIR/data/ethereum \
+ --password $BASEDIR/password \
 $BASEDIR/genesis.json
 
-$BASEDIR/geth --datadir $BASEDIR/data/ethereum^
- --ethash.dagdir $BASEDIR/data/ethash^
- init^
+$BASEDIR/geth --datadir $BASEDIR/data/ethereum \
+ --ethash.dagdir $BASEDIR/data/ethash \
+ init \
  %0/genesis.json
 
 $BASEDIR/bootnode -genkey $BASEDIR/data/ethereum/node.key
